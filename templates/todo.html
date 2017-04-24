@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>To Do List</title>
+</head>
+<body>
+	<div id='list'>
+ 		<table style="width:100%">
+  			<tr>
+    			<th>Your To Do List</th>
+  			</tr>
+  			{%for item in list%}
+  			<tr>
+  				<td>{{item}}</td>
+  			</tr>
+  			{% endfor %}
+		</table>
+	</div>
+		<p></p>
+		<p>-------------------------------------------------</p>
+		<p></p>
+	<div id='submit'>
+		<form action="/submit" method="post">
+			<p>
+			<label for="task">Task</label>
+			<input type="text" name="task"></input></p>
+			<p>
+			<label for="email">Email</label>
+			<input type="text" name="email"></input></p>
+			<p>
+			<label for="priority">Priority</label>
+			<select name='priority'>
+				<p><option value='low'>Low</option></p>
+				<p><option value='medium'>Medium</option></p>
+				<p><option value='High'>High</option></p>
+			</select></p>
+			<input type="submit" value="Add To Do Item"></input>
+		</form>
+	</div>
+</body>
+</html>
