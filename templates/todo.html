@@ -6,15 +6,21 @@
 </head>
 <body>
 	<div id='list'>
- 		<table style="width:100%">
-  			<tr>
-    			<th>Your To Do List</th>
-  			</tr>
-  			{%for item in list%}
-  			<tr>
-  				<td>{{item}}</td>
-  			</tr>
-  			{% endfor %}
+ 		 <table>
+					<thead>
+					<th>Task</th>
+					<th>Email</th>
+					<th>Priority</th>
+					</thead>
+
+					<tbody>
+					{% for item in list %}
+
+						<td>{{ item[0:] }}</td>
+
+
+					{% endfor %}
+					</tbody>
 		</table>
 	</div>
 		<p></p>
