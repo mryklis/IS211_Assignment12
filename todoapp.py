@@ -4,7 +4,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def todolist():
-    list = ['do something', 'email', 'privu']
+    list = [('do something', 'email', 'privu')]
     return render_template('todo.html', list=list)
 
 
